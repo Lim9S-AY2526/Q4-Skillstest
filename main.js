@@ -9,7 +9,7 @@ function authenticate() {
 
     let status = "";
 
-    if (username === "student01" && pwd === "12345678") {
+    if (username === "UserAdmin" && pwd === "admin123") {
         status = "success";
     } else {
         status = "failed";
@@ -20,7 +20,7 @@ function authenticate() {
             alert(granted);
             attempt_counter = 0;
             document.getElementById("display").innerHTML = "";
-            window.location.href = "notebooks.html";
+            window.location.href = "notebook.html";  // FINAL FIX
             break;
 
         case "failed":
@@ -28,7 +28,7 @@ function authenticate() {
             document.getElementById("display").innerHTML =
                 "Incorrect username and/or password. Attempt " + attempt_counter + " of 3";
 
-      
+            // LOOP requirement
             for (let i = attempt_counter; i >= 3; i++) {
                 alert(denied);
                 document.getElementById("loginBTN").disabled = true;
