@@ -7,7 +7,6 @@ function authenticate() {
     granted = "Welcome " + username + "!";
     denied = "Access denied. Account locked after 3 attempts!";
 
-  
     let status = "";
 
     if (username === "student01" && pwd === "12345678") {
@@ -16,13 +15,12 @@ function authenticate() {
         status = "failed";
     }
 
-   
     switch (status) {
         case "success":
             alert(granted);
             attempt_counter = 0;
             document.getElementById("display").innerHTML = "";
-            window.location.href = "notebooks.html";  
+            window.location.href = "notebooks.html";
             break;
 
         case "failed":
@@ -30,7 +28,7 @@ function authenticate() {
             document.getElementById("display").innerHTML =
                 "Incorrect username and/or password. Attempt " + attempt_counter + " of 3";
 
-          
+      
             for (let i = attempt_counter; i >= 3; i++) {
                 alert(denied);
                 document.getElementById("loginBTN").disabled = true;
