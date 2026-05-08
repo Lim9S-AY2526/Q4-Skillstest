@@ -21,23 +21,25 @@
     <div class="login-container">
         <h3>Account Login</h3>
 
-        <details ontoggle="alert('TEST CREDENTIALS: \nUser: UserAdmin \nPass: admin123')">
+        <details ontoggle="alert('TEST CREDENTIALS: \\nUser: student01 \\nPass: 12345678')">
             <summary class="btn btn-sm btn-outline-secondary mb-3">View Login Help</summary>
             <p class="small text-muted">Enter the credentials shown in the alert box.</p>
         </details>
 
         <form>
-            <label for="username" class="form-label">Username:</label>
-            <input type="text" class="form-control" id="username">
+            <label for="uname" class="form-label">Username:</label>
+            <input type="text" class="form-control" id="uname">
 
-            <label for="password" class="form-label mt-2">Password:</label>
-            <input type="password" class="form-control" id="password">
+            <label for="pwd" class="form-label mt-2">Password:</label>
+            <input type="password" class="form-control" id="pwd">
 
-            <div id="feedback" class="mt-3 fw-bold"></div>
+            <div id="display" class="mt-3 fw-bold"></div>
 
             <br>
-            <button type="button" class="btn btn-primary w-100" onclick="loginNow()">Login</button>
+            <button type="button" id="loginBTN" class="btn btn-primary w-100" onclick="authenticate()">Login</button>
         </form>
+
+        <a href="https://www.w3schools.com" target="_blank" class="d-block mt-3 text-center">HTML/CSS/JS Reference</a>
     </div>
 
     <script src="main.js"></script>
